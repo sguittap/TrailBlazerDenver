@@ -30,12 +30,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tytechortz/MERN-project.git"
+    "url": "git+https://github.com/sguittap/trailblazerdenver"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tytechortz/MERN-project/issues"
+    "url": "https://github.com/sguittap/trailblazerdenver"
   },
-  "homepage": "https://github.com/tytechortz/MERN-project#readme"
+  "homepage": "https://github.com/sguittap/trailblazerdenver"
 }
