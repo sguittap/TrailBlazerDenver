@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(methodOverride('_method'));
 app.use(express.static('css'));
-app.use(express.static(path.join(__dirname, 'TrailBlazerFront/build')));
+app.use(express.static(path.join(__dirname, 'FrontEnd/build')));
 app.use(session({ 
     saveUnitialized: true,
     secret: process.env.SESSION_SECRET,
@@ -47,7 +47,7 @@ store.on('error', function(error) {
     console.log(error)
 });
 app.get('*', (req,res) =>{
-    res.sendFile(path.join(__dirname+'/TrailBlazerFront/build/index.html'));
+    res.sendFile(path.join(__dirname+'/FrontEnd/build/index.html'));
 });
 
 app.use(cors(corsOptions));
