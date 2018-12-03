@@ -156,9 +156,11 @@ getWeather = async () => {
 
     try{
       const weather = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&APPID=d177ecaf5436da5c14f410fb73b64b4d`);
+      console.log(weather)
       const weatherJson = await weather.json();
       return weatherJson
     } catch(err){
+        console.log(err)
       return err;
     }
   }
