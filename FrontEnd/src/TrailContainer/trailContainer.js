@@ -84,7 +84,7 @@ addTrail = async (trail, e) => {
 }
 deleteTrail = async (id) => {
     console.log(id, ' deleteTrail');
-    const deleteTrailResponse = await fetch(`${process.env.REACT_APP_BACKEND_ADDRESS}/trails` + id, {
+    const deleteTrailResponse = await fetch(`${process.env.REACT_APP_BACKEND_ADDRESS}/trails/` + id, {
         method: 'DELETE'
     });
 
@@ -106,7 +106,7 @@ handleEditChange = (e) => {
 closeAndEdit = async (e) => {
     e.preventDefault();
     try {
-        const editResponse = await fetch(`${process.env.REACT_APP_BACKEND_ADDRESS}/trails` + this.state.trailToEdit._id, {
+        const editResponse = await fetch(`${process.env.REACT_APP_BACKEND_ADDRESS}/trails/` + this.state.trailToEdit._id, {
             method: 'PUT',
             body: JSON.stringify({
                 name: this.state.trailToEdit.name,
