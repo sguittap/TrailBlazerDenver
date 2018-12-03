@@ -46,15 +46,16 @@ store.on('connected', function() {
 store.on('error', function(error) {
     console.log(error)
 });
-app.get('*', (req,res) =>{
-    res.sendFile(path.join(__dirname+'/FrontEnd/build/index.html'));
-});
 
 app.use(cors(corsOptions));
 app.use('/api/v1/auth', authController);
 
 //landing page
 app.use('/api/v1/trails/', trailController);
+
+app.get('*', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/FrontEnd/build/index.html'));
+});
 
 const port = process.env.PORT || 9000
 app.listen(port, () => {
