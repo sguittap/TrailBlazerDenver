@@ -62,7 +62,7 @@ componentDidMount(){
 addTrail = async (trail, e) => {
     e.preventDefault();
     console.log(trail);
-
+// fake line reeeeeeeeee
     try {
         const addedTrail = await fetch(`${process.env.REACT_APP_BACKEND_ADDRESS}/trails`, {
             method: 'POST',
